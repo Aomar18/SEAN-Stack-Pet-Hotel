@@ -18,5 +18,5 @@ app.use('/pet', PetRouter);
 
 
 app.listen(PORT, () => {
-    console.log('Server surfin' , PORT);
+    console.log('surfin the mighty serverr' , PORT);
 });
