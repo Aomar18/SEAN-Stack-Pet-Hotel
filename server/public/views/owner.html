@@ -3,9 +3,22 @@
 
     <h1> Owner Profile Management</h1>
 
-
-    <form ng-submit="vm.addOwner(vm.ownerToAdd)">
+<!-- INPUT AREA  -->
+    <form ng-submit="oc.addOwner(oc.ownerToAdd)">
         <input type="text" placeholder="first name" ng-model="vm.OwnerToAdd.first_name">
         <input type="text" placeholder="last name" ng-model="vm.petToAdd.last_name">
         <input type="submit">
     </form>
+
+<!-- OUTPUT AREA -->
+
+<div ng-repeat="owner in oc.owners">
+        <ul>
+
+            <div class="container1">
+                <span>
+                    <div>{{owners.first_name}}</div>
+                    <div>{{owners.last_name}}</div>
+                </span>
+
+            </div>
