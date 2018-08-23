@@ -9,8 +9,8 @@ router.post('/', (req, res) => {
                   ("first_name", "last_name")
                    VALUES ($1, $2,);`;
     pool.query(query, [
-        owners.first_name, 
-        owners.last_name, 
+        serverOwners.first_name, 
+        serverOwners.last_name, 
      ]).then(() => {
         res.sendStatus(201);
     }).catch((error) => {
@@ -23,24 +23,24 @@ router.post('/', (req, res) => {
 
 //PET POST
 router.post('/', (req, res) => {
-    const pets = req.body;
+    const serverPets = req.body;
     const query = `INSERT INTO "pets" 
                   ("name", "breed" , "color" , "checkedin" , "lastcheckin")
                    VALUES ($1, $2, $3, $4, $5);`;
     pool.query(query, [
-        pets.name, 
-        pets.breed,
-        pets.color,
-        pets.checkedin,
-        pets.lastcheckin
-     ]).then(() => {
+        serverPets.name, 
+        serverPets.breed,
+        serverPets.color,
+        serverPets.checkedin,
+        serverPets.lastcheckin
+     ]).then((result) => {
         res.sendStatus(201);
     }).catch((error) => {
         console.log('Error with PET POST in router', error);
         res.sendStatus(500);
     });// end PET POST
-});
 
+});
 
 
 

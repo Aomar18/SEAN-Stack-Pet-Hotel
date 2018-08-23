@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,23 +15,26 @@
     <script src="scripts/controllers/home.controller.js"></script>
     <script src="scripts/controllers/owner.controller.js"></script>
     <script src="scripts/controllers/pet.controller.js"></script>
-    
+
 
     <title>PETOCRACY OF THE FUTURE</title>
 </head>
+
 <body>
 
 
-        <body ng-app="PetHotelApp">
-                <nav>
-                    <a href="/">Home Alone 3</a>
-                    <a href="#!/pet">Pet Dashboard</a>
-                    <a href="#!/owner">Manage Owners</a>
-                    <a href="#!/error"></a>
-               
-                </nav>
-            
-                <ng-view> </ng-view> 
-    
-</body>
+    <body ng-app="PetHotelApp">
+        <nav>
+            <a href="/">Home</a>
+            <a href="#!/pet">Pet Dashboard</a>
+            <a href="#!/owner">Manage Owners</a>
+            <a href="#!/error"></a>
+
+        </nav>
+       
+
+        <ng-view> </ng-view>
+
+    </body>
+
 </html>

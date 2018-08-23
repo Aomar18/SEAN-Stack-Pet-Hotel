@@ -1,7 +1,31 @@
 <div class="petbg">
 
-<h3> Pets Directory</h3>
+    <h3> Pets Directory</h3>
+    <!-- INPUT AREA -->
+
+    <form ng-submit="vm.addPet(vm.petToAdd)">
+        <input type="text" placeholder="name" ng-model="vm.petToAdd.name">
+        <input type="text" placeholder="breed" ng-model="vm.petToAdd.breed">
+        <input type="text" placeholder="color" ng-model="vm.petToAdd.color">
+        <input type="text" placeholder="pet checked in ?" ng-model="vm.petToAdd.checkedin">
+        <input type="text" placeholder="20XX/XX/XX" ng-model="vm.petToAdd.lastcheckin">
+        <input type="submit">
+    </form>
 
 
 
-</div>
+
+    <!-- OUTPUT AREA -->
+    <div ng-repeat="pet in pc.pets">
+        <ul>
+
+            <div class="container">
+                <span>
+                    <div>{{pets.name}}</div>
+                    <div>{{pets.breed}}</div>
+                    <div>{{pets.color}}</div>
+                    <div>{{pets.checkedin}}</div>
+                    <div>{{pets.checkedin}}</div>
+                </span>
+
+            </div>

@@ -1,13 +1,11 @@
 <div class="ownerbg">
 
 
-<h1> Owner Profile Management</h1>
+    <h1> Owner Profile Management</h1>
 
 
-<form>
-
-
-    
-</form>
-
-</div>
+    <form ng-submit="vm.addOwner(vm.ownerToAdd)">
+        <input type="text" placeholder="first name" ng-model="vm.OwnerToAdd.first_name">
+        <input type="text" placeholder="last name" ng-model="vm.petToAdd.last_name">
+        <input type="submit">
+    </form>
