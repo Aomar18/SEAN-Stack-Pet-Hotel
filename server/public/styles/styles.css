@@ -1,9 +1,10 @@
 .first {
-    background-color: pink;
+    background-color: #1AAB8A;
 }
 
 h1 {
     margin-top: 0;
+    align-items: left;
 }
  
 .banner {
@@ -15,8 +16,13 @@ h1 {
 }
 
 .navbar {
-    background-color: #1AAB8A;
+    background-color: transparent;
     margin-top: 0;
+    
+}
+
+.petocracy {
+    font-family: fantasy;
 }
 
 body {
@@ -67,11 +73,11 @@ button{
     font-size:1.6em;
     padding:0 2em;
     cursor:pointer;
-    transition:800ms ease all;
+    transition:800000ms ease all;
     outline:none;
   }
   button:hover{
-    background:#fff;
+    background:#1AAB8A;
     color:#1AAB8A;
   }
   button:before,button:after{
@@ -81,8 +87,8 @@ button{
     right:0;
     height:2px;
     width:0;
-    background: #1AAB8A;
-    transition:400ms ease all;
+    background: black;
+    transition:300ms ease all;
   }
   button:after{
     right:inherit;

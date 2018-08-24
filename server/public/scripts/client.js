@@ -1,7 +1,7 @@
 let PetHotelApp = angular.module('PetHotelApp' , ['ngRoute']);
 
 PetHotelApp.config(function ($routeProvider){
-    $routeProvider.when('/pet' , {
+    $routeProvider.when('/' , {
     }).when('/pet', {
         templateUrl: 'views/pet.html' ,
         controller: 'PetController as pc'

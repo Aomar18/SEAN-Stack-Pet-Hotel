@@ -6,6 +6,7 @@ var pool = require('../modules/pool.js');
 //PET POST
 router.post('/', (req, res) => {
     const serverPets = req.body;
+    console.log()
     const query = `INSERT INTO "pets" 
                   ("name", "breed" , "color" , "checkedin" , "lastcheckin")
                    VALUES ($1, $2, $3, $4, $5);`;

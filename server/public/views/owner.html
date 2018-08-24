@@ -1,46 +1,44 @@
-<body class="ownerbg">
+<body id="ownerbg">
 
 
     <h4> Owner Profile Management</h4>
-<span class="thankyou"> Sign up now! Your pet will thank you!</span>
+    <span class="thankyou"> Sign up now! Your pet will thank you!</span>
 
-<br>   
-<br>
+    <br>
+    <br>
 
-<!-- INPUT AREA  -->
+    <!-- INPUT AREA  -->
     <form ng-submit="oc.addOwner(oc.ownerToAdd)">
-            <label>First Name:</label>
+        <label>First Name:</label>
         <input type="text" placeholder="John" ng-model="oc.ownerToAdd.first_name">
         <label>Last Name:</label>
         <input type="text" placeholder="Doe" ng-model="oc.ownerToAdd.last_name">
         <input type="submit">
     </form>
 
-<!-- page breaks -->
-<br>
-<br>
+    <!-- page breaks -->
+    <br>
+    <br>
 
 
     <!-- OUTPUT AREA -->
-
-   
-
-
-        <div class="containerOwner">
-            <table>
-                <th>Id#</th>
-                <th>First name:</th>
-                <th>Last name: </th>
+    <div class="containerOwner">
+        <table>
+            <th>Id#</th>
+            <th>First name:</th>
+            <th>Number of Pets:</th>
+            <th>Last name: </th>
 
 
-                <tr  ng-repeat="owner in oc.owners">
-                    <td>{{owner.id}}</td>
-                    <td>{{owner.first_name}}</td>
-                    <td>{{owner.last_name}}</td>
-                    
+            <tr ng-repeat="owner in oc.owners">
+                <td>{{owner.id}}</td>
+                <td>{{owner.first_name}}</td>
+                <td></td>
+                <td>{{owner.last_name}}</td>
 
-                </tr>
-            </table>
-        </div>
-    
+
+            </tr>
+        </table>
+    </div>
+
 </body>
