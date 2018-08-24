@@ -1,55 +1,73 @@
 <div class="petbg">
 
 
-        <h1> Welcome to PetoCracy</h1>
-        <p>A leisurely place for your pets to feel at home!</p>
-    </div>
-    <span> Pet Application Form</span>
- 
-
-
-
-    <h3> Pets Directory</h3>
-
-
-    
-    <!-- INPUT AREA -->
-
-    <form ng-submit="pc.addPet(pc.petToAdd)">
-
-        <input type="text" placeholder="pet name" ng-model="pc.petToAdd.name">
-        <input type="text" placeholder="type of pet" ng-model="pc.petToAdd.breed">
-        <input type="text" placeholder="color" ng-model="pc.petToAdd.color">
-        <input type="text" placeholder="pet checked in ?" ng-model="pc.petToAdd.checkedin">
-        <input type="number" placeholder="20XX/DD/MM" ng-model="pc.petToAdd.lastcheckin">
-        <input type="submit">
-    </form>
+    <h1> Welcome to PetoCracy</h1>
+    <p>A leisurely place for your pets to feel at home!</p>
+</div>
+<span> Pet Application Form</span>
 
 
 
 
-    <!-- OUTPUT AREA -->
-    <div >
-        <table>
-            <th>id:</th>
-            <th>Pet Name</th>
-            <th>Type</th>
-            <th>Color</th>
-            <th>Checked In ?</th>
-            <th>Date last checked in? </th>
-            
-
-            <tr ng-repeat="pet in pc.pets">
-               <td>{{pet.id}}</td>
-                <td>{{pet.name}}</td>
-                <td>{{pet.breed}}</td>
-                <td>{{pet.color}}</td>
-                <td>{{pet.checkedin}}</td>
-                <td>{{pet.lastcheckin | date :  "dd.MM.y"}}</td>  
-            </tr>
-        </table>
+<h3> Pets Directory</h3>
 
 
-            
 
-            </div>
+<!-- INPUT AREA -->
+
+<form ng-submit="pc.addPet(pc.petToAdd)">
+
+    <label>Pet Name:</label>
+    <input type="text" placeholder="pet name" ng-model="pc.petToAdd.name">
+
+    <label>Type of Pet:</label>
+    <input type="text" placeholder="type of pet" ng-model="pc.petToAdd.breed">
+    <br>
+
+    <label>Pet Color:</label>
+    <input type="text" placeholder="color" ng-model="pc.petToAdd.color">
+
+
+
+    <label>Checked in?:</label>
+    <input type="text" placeholder="pet checked in ?" ng-model="pc.petToAdd.checkedin">
+
+    <br>
+    <label>Last visit?:</label>
+    <input type="date" placeholder="20XX/DD/MM" ng-model="pc.petToAdd.lastcheckin">
+
+    <input type="submit">
+</form>
+
+<!-- page breaks -->
+<br>
+<br>
+
+
+<!-- OUTPUT AREA -->
+<div class="containerPet">
+
+
+    <table>
+        <th>id:</th>
+        <th>Pet Name</th>
+        <th>Type</th>
+        <th>Color</th>
+        <th>Checked In ?</th>
+        <th>Date last checked in? </th>
+
+
+        <tr ng-repeat="pet in pc.pets">
+            <td>{{pet.id}}</td>
+            <td>{{pet.name}}</td>
+            <td>{{pet.breed}}</td>
+            <td>{{pet.color}}</td>
+            <td>{{pet.checkedin}}</td>
+            <td>{{pet.lastcheckin | date : "dd.MM.y"}}</td>
+        </tr>
+    </table>
+
+
+
+
+</div>

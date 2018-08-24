@@ -2,20 +2,31 @@
 
 
     <h4> Owner Profile Management</h4>
+<span class="thankyou"> Sign up now! Your pet will thank you!</span>
 
-    <!-- INPUT AREA  -->
+<br>   
+<br>
+
+<!-- INPUT AREA  -->
     <form ng-submit="oc.addOwner(oc.ownerToAdd)">
-        <input type="text" placeholder="first name" ng-model="oc.ownerToAdd.first_name">
-        <input type="text" placeholder="last name" ng-model="oc.ownerToAdd.last_name">
+            <label>First Name:</label>
+        <input type="text" placeholder="John" ng-model="oc.ownerToAdd.first_name">
+        <label>Last Name:</label>
+        <input type="text" placeholder="Doe" ng-model="oc.ownerToAdd.last_name">
         <input type="submit">
     </form>
+
+<!-- page breaks -->
+<br>
+<br>
+
 
     <!-- OUTPUT AREA -->
 
    
 
 
-        <div class="container1">
+        <div class="containerOwner">
             <table>
                 <th>Id#</th>
                 <th>First name:</th>

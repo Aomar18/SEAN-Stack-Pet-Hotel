@@ -1,36 +1,28 @@
-.navbar {
-    text-align: center;
-    
-}
-
 .first {
     background-color: pink;
 }
  
-.navbar {
+.banner {
     
-    background-color: forestgreen;
-    height: 80px;
+    background-image: url("../images/pethotel.jpeg");
+    text-align: center;
+    height: 160px;
 }
 
-
-.second{
-    background-color: green;
+.navbar {
+    background-color: #1AAB8A;
 }
 
-.ownerbg {
-    background-color: blue;
+body {
+    text-align:center;
+}
+.thankyou {
+    font-family: cursive;
 }
 
 table {
     border-style: double;
-}
-
-.petbg{
-    background-color: pink;
-    font-family: cursive;
     text-align: center;
-
 }
 
 th, td {
@@ -40,6 +32,58 @@ th, td {
     vertical-align: bottom;
 }
 
+
+/* white text - black row */
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: gray;
+    color: white;
 }
+
+/* inverse of the one before this */
+tr:nth-child(odd) {
+    background-color: white;
+    color: black;
+}
+
+label {
+    text-align: left;
+}
+
+
+
+button{
+    background:#1AAB8A;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:60px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+  }
+  button:hover{
+    background:#fff;
+    color:#1AAB8A;
+  }
+  button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:400ms ease all;
+  }
+  button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  button:hover:before,button:hover:after{
+    width:100%;
+    transition:8000ms ease all;
+  }
