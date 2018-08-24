@@ -18,7 +18,7 @@
         <input type="text" placeholder="type of pet" ng-model="pc.petToAdd.breed">
         <input type="text" placeholder="color" ng-model="pc.petToAdd.color">
         <input type="text" placeholder="pet checked in ?" ng-model="pc.petToAdd.checkedin">
-        <input type="number" placeholder="20XX/XX/XX" ng-model="pc.petToAdd.lastcheckin">
+        <input type="number" placeholder="20XX/DD/MM" ng-model="pc.petToAdd.lastcheckin">
         <input type="submit">
     </form>
 
@@ -31,11 +31,11 @@
 
             <div class="container2">
                 <span>
-                    <div>{{pets.name}}</div>
-                    <div>{{pets.breed}}</div>
-                    <div>{{pets.color}}</div>
-                    <div>{{pets.checkedin}}</div>
-                    <div>{{pets.checkedin}}</div>
+                    <div>{{pet.name}}</div>
+                    <div>{{pet.breed}}</div>
+                    <div>{{pet.color}}</div>
+                    <div>{{pet.checkedin}}</div>
+                    <div>{{pet.lastcheckin}}</div>
                 </span>
 
             </div>
