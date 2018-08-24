@@ -12,6 +12,21 @@ PetHotelApp.controller('PetController', function ($http) {
         checkedin: '',
         lastcheckin: ''
     }
+    vm.addPet = function (petToAdd) {
+        console.log(petToAdd);
+        $http({
+            method: 'POST',
+            url: '/pet',
+            data: petToAdd
+        }).then(function (response) {
+            console.log('Input received');
+        }).catch(function (error) {
+            alert('error adding new pet to data');
+            console.log('Error', error);
+        });//End POST 
+    }
+
+
 
     //GET FUNCTION PETS
     function getPets() {
@@ -27,21 +42,6 @@ PetHotelApp.controller('PetController', function ($http) {
         });// End GET
     }
     getPets();
-
-    vm.addPet = function (petToAdd) {
-        console.log(petToAdd);
-        $http({
-            method: 'POST',
-            url: '/pet',
-            data: petToAdd
-        }).then(function (response) {
-            console.log('Input received');
-            getPets();
-        }).catch(function (error) {
-            alert('error adding new pet to data');
-            console.log('Error', error);
-        });//End POST 
-    }
 
 
 

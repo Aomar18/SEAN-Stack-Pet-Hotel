@@ -16,7 +16,7 @@ PetHotelApp.controller('OwnerController', function ($http) {
 
         $http({
             method: 'POST',
-            url: '/home',
+            url: '/owner',
             data: ownerToAdd
         }).then(function (response) {
             console.log('Input received');

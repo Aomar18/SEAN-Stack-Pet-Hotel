@@ -1,7 +1,7 @@
-<div class="ownerbg">
+<body class="ownerbg">
 
 
-    <h1> Owner Profile Management</h1>
+    <h4> Owner Profile Management</h4>
 
     <!-- INPUT AREA  -->
     <form ng-submit="oc.addOwner(oc.ownerToAdd)">
@@ -12,7 +12,7 @@
 
     <!-- OUTPUT AREA -->
 
-    <div ng-repeat="owner in oc.owners">
+   
 
 
         <div class="container1">
@@ -20,14 +20,16 @@
                 <th>Id#</th>
                 <th>First name:</th>
                 <th>Last name: </th>
-                
 
-                <tr>
+
+                <tr  ng-repeat="owner in oc.owners">
                     <td>{{owner.id}}</td>
                     <td>{{owner.first_name}}</td>
                     <td>{{owner.last_name}}</td>
-                    <td></td>
                     
+
                 </tr>
             </table>
         </div>
+    
+</body>

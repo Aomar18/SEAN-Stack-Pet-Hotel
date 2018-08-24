@@ -1,9 +1,16 @@
 .navbar {
     text-align: center;
+    
 }
 
 .first {
     background-color: pink;
+}
+ 
+.navbar {
+    
+    background-color: forestgreen;
+    height: 80px;
 }
 
 
@@ -11,6 +18,13 @@
     background-color: green;
 }
 
+.ownerbg {
+    background-color: blue;
+}
+
+table {
+    border-style: double;
+}
 
 .petbg{
     background-color: pink;
@@ -19,3 +33,13 @@
 
 }
 
+th, td {
+    padding: 15px;
+    text-align: left;
+    height: 15px;
+    vertical-align: bottom;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

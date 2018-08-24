@@ -10,6 +10,9 @@
 
 
     <h3> Pets Directory</h3>
+
+
+    
     <!-- INPUT AREA -->
 
     <form ng-submit="pc.addPet(pc.petToAdd)">
@@ -26,16 +29,27 @@
 
 
     <!-- OUTPUT AREA -->
-    <div ng-repeat="pet in pc.pets">
-        <ul>
+    <div >
+        <table>
+            <th>id:</th>
+            <th>Pet Name</th>
+            <th>Type</th>
+            <th>Color</th>
+            <th>Checked In ?</th>
+            <th>Date last checked in? </th>
+            
 
-            <div class="container2">
-                <span>
-                    <div>{{pet.name}}</div>
-                    <div>{{pet.breed}}</div>
-                    <div>{{pet.color}}</div>
-                    <div>{{pet.checkedin}}</div>
-                    <div>{{pet.lastcheckin}}</div>
-                </span>
+            <tr ng-repeat="pet in pc.pets">
+               <td>{{pet.id}}</td>
+                <td>{{pet.name}}</td>
+                <td>{{pet.breed}}</td>
+                <td>{{pet.color}}</td>
+                <td>{{pet.checkedin}}</td>
+                <td>{{pet.lastcheckin | date :  "dd.MM.y"}}</td>  
+            </tr>
+        </table>
+
+
+            
 
             </div>
