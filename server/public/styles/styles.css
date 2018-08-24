@@ -1,11 +1,17 @@
-.homebg {
-    background-color: blue;
+.first {
+    background-color: pink;
 }
 
-.ownerbg{
+
+.second{
     background-color: green;
 }
 
+
 .petbg{
     background-color: pink;
+    font-family: cursive;
+    text-align: center;
+
 }
+

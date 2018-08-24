@@ -1,6 +1,6 @@
 <div class="petbg">
 
-    
+
         <h1> Welcome to PetoCracy</h1>
         <p>A leisurely place for your pets to feel at home!</p>
     </div>
@@ -12,12 +12,13 @@
     <h3> Pets Directory</h3>
     <!-- INPUT AREA -->
 
-    <form ng-submit="vm.addPet(vm.petToAdd)">
-        <input type="text" placeholder="name" ng-model="vm.petToAdd.name">
-        <input type="text" placeholder="breed" ng-model="vm.petToAdd.breed">
-        <input type="text" placeholder="color" ng-model="vm.petToAdd.color">
-        <input type="text" placeholder="pet checked in ?" ng-model="vm.petToAdd.checkedin">
-        <input type="number" placeholder="20XX/XX/XX" ng-model="vm.petToAdd.lastcheckin">
+    <form ng-submit="pc.addPet(pc.petToAdd)">
+
+        <input type="text" placeholder="pet name" ng-model="pc.petToAdd.name">
+        <input type="text" placeholder="type of pet" ng-model="pc.petToAdd.breed">
+        <input type="text" placeholder="color" ng-model="pc.petToAdd.color">
+        <input type="text" placeholder="pet checked in ?" ng-model="pc.petToAdd.checkedin">
+        <input type="number" placeholder="20XX/XX/XX" ng-model="pc.petToAdd.lastcheckin">
         <input type="submit">
     </form>
 

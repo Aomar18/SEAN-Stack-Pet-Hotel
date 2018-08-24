@@ -5,8 +5,8 @@
 
 <!-- INPUT AREA  -->
     <form ng-submit="oc.addOwner(oc.ownerToAdd)">
-        <input type="text" placeholder="first name" ng-model="vm.OwnerToAdd.first_name">
-        <input type="text" placeholder="last name" ng-model="vm.petToAdd.last_name">
+        <input type="text" placeholder="first name" ng-model="vm.ownerToAdd.first_name">
+        <input type="text" placeholder="last name" ng-model="vm.ownerToAdd.last_name">
         <input type="submit">
     </form>
 
@@ -17,8 +17,9 @@
 
             <div class="container1">
                 <span>
-                    <div>{{owners.first_name}}</div>
-                    <div>{{owners.last_name}}</div>
+                    <div>{{owner.first_name}}</div>
+                    <div></div>
+                    <div>{{owner.last_name}}</div>
                 </span>
-
+</ul>
             </div>
