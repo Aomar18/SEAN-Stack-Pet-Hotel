@@ -17,6 +17,9 @@
 
 <form ng-submit="pc.addPet(pc.petToAdd)">
 
+    <label>Owner Id:</label>
+    <input type="text"  ng-model="pc.petToAdd.owner_id">
+
     <label>Pet Name:</label>
     <input type="text" placeholder="Expresso" ng-model="pc.petToAdd.name">
 
@@ -49,6 +52,7 @@
 
 
     <table>
+        <th>Owner Id:</th>
         <th>id:</th>
         <th>Pet Name</th>
         <th>Type</th>
@@ -58,6 +62,7 @@
 
 
         <tr ng-repeat="pet in pc.pets">
+            <td>{{pet.owner_id}}</td>
             <td>{{pet.id}}</td>
             <td>{{pet.name}}</td>
             <td>{{pet.breed}}</td>

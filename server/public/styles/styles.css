@@ -1,5 +1,13 @@
 .first {
-    background-color: #1AAB8A;
+    background: linear-gradient( to top,
+        #1AAB8A,
+        #1AAB8A,
+        skyblue,
+        skyblue,
+        #1AAB8A,
+        #1AAB8A
+
+    ); 
 }
 
 h1 {
@@ -73,11 +81,11 @@ button{
     font-size:1.6em;
     padding:0 2em;
     cursor:pointer;
-    transition:800000ms ease all;
+    transition:800ms ease all;
     outline:none;
   }
   button:hover{
-    background:#1AAB8A;
+    background:rgb(66, 223, 186);
     color:#1AAB8A;
   }
   button:before,button:after{
@@ -87,7 +95,7 @@ button{
     right:0;
     height:2px;
     width:0;
-    background: black;
+    background: white;
     transition:300ms ease all;
   }
   button:after{
