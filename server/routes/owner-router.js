@@ -32,5 +32,16 @@ router.get('/', (req, res) => {
     });
 });
 
+router.delete('/:id', function(req,res){
+    const deleteId = req.params.id;
+    const query = `DELETE FROM "owner" WHERE "id" = $1;`;
+    pool.query(query,[deleteId]).then((results)=>{
+        console.log(results);
+        res.sendStatus(200);
+    }).catch((error)=>{
+        console.log('Error in Delete route',error);
+        res.sendStatus(500);
+    });
+});
 
 module.exports = router;
