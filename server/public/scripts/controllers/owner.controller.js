@@ -13,7 +13,6 @@ PetHotelApp.controller('OwnerController', function ($http) {
     //ADD OWNER FUNCTION
     vm.addOwner = function (ownerToAdd) {
         console.log(ownerToAdd);
-
         $http({
             method: 'POST',
             url: '/owner',
@@ -46,19 +45,22 @@ PetHotelApp.controller('OwnerController', function ($http) {
 
 
     getOwner();
-})
+
 
 
     
-    deleteOwner = function (owner_id) {
+    vm.deleteOwner = function (ownerid) {
+        console.log(ownerid.id)
         $http({
             method: 'DELETE',
-            url: '/owner/' + owner_id
+            url: '/owner/' + ownerid.id
         }).then(function (response) {
             alert('owner deleted.');
-             vm.getOwner();
+             getOwner();
         }).catch(function (error) {
             alert('Unable to delete owner');
             console.log(error);
         })
     }
+
+})

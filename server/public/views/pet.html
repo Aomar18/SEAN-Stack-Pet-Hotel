@@ -59,6 +59,7 @@
         <th>Color</th>
         <th>Checked In ?</th>
         <th>Date last checked in? </th>
+        <th>Remove Pet:</th>
 
 
         <tr ng-repeat="pet in pc.pets">
@@ -69,7 +70,7 @@
             <td>{{pet.color}}</td>
             <td>{{pet.checkedin}}</td>
             <td>{{pet.lastcheckin | date : "dd.MM.y"}}</td>
-            <td><button ng-click="pc.deletePet(pet_id)">Remove Pet</button></td>
+            <td><button ng-click="pc.deletePet(pet)">Remove Pet</button></td>
         </tr>
     </table>
 

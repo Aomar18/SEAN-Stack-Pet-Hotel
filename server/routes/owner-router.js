@@ -8,7 +8,7 @@ router.post('/', (req, res) => {
     const serverOwners = req.body;
     const query = `INSERT INTO "owners" 
                   ("first_name", "last_name")
-                   VALUES ($1, $2,);`;
+                   VALUES ($1, $2);`;
     pool.query(query, [
         serverOwners.first_name, 
         serverOwners.last_name, 
@@ -23,8 +23,9 @@ router.post('/', (req, res) => {
 
 
 router.get('/', (req, res) => {
-    const query = `SELECT * FROM "owners";`;
+    const query = `SELECT "owners"."id" , "owners"."first_name" , "owners"."last_name"  ,COUNT ("pets"."owner_id") FROM "owners" LEFT JOIN "pets" ON "pets"."owner_id" = "owners"."id" GROUP BY "owners"."id" , "owners"."first_name" ORDER BY count ASC; `;
     pool.query(query).then((results) => {
+        console.log(results.rows);
         res.send(results.rows);
     }).catch((error) => {
         console.log('Error making OWNER GET in router', error);
@@ -32,9 +33,10 @@ router.get('/', (req, res) => {
     });
 });
 
-router.delete('/:id', function(req,res){
-    const deleteId = req.params.id;
-    const query = `DELETE FROM "owner" WHERE "id" = $1;`;
+router.delete('/:ownerid', function(req,res){
+    const deleteId = req.params.ownerid;
+    console.log(req.params);
+    const query = `DELETE FROM "owners" WHERE "id" = $1;`;
     pool.query(query,[deleteId]).then((results)=>{
         console.log(results);
         res.sendStatus(200);

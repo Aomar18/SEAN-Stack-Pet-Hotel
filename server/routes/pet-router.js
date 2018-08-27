@@ -37,9 +37,10 @@ router.get('/', (req, res) => {
     });
 });
 
-router.delete('/:pet_id', function(req,res){
-        const deleteId = req.params.pet_id;
-        const query = `DELETE FROM "pets" WHERE "pet_id" = $1;`;
+router.delete('/:petid', function(req,res){
+        const deleteId = req.params.petid;
+        console.log(req.params.petid);
+        const query = `DELETE FROM "pets" WHERE "id" = $1;`;
         pool.query(query,[deleteId]).then((results)=>{
             console.log(results);
             res.sendStatus(200);

@@ -46,13 +46,14 @@ PetHotelApp.controller('PetController', function ($http) {
 
 
 
-})
 
 
-deletePet = function (pet_id) {
+
+vm.deletePet = function (pet) {
+    console.log(pet.id);
     $http({
         method: 'DELETE',
-        url: '/pet/' + pet_id
+        url: '/pet/' + pet.id
     }).then(function (response) {
         alert('pet deleted.');
         getPets();
@@ -61,3 +62,5 @@ deletePet = function (pet_id) {
         console.log(error);
     })
 }
+
+})

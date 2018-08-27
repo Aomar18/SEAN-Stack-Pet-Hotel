@@ -10,6 +10,6 @@ PetHotelApp.config(function ($routeProvider){
         templateUrl: 'views/owner.html' ,
         controller: 'OwnerController as oc'
     }).otherwise({
-        template: 'views/404.html'
+        template: 'ERROR 404: No pets allowed here'
     })
 })

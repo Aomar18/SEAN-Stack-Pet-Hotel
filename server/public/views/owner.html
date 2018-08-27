@@ -28,13 +28,14 @@
             <th>First name:</th>
             <th>Last name: </th>
             <th>Number of Pets:</th>
-
+            <th>Remove Owner</th>
 
             <tr ng-repeat="owner in oc.owners">
                 <td>{{owner.id}}</td>
                 <td>{{owner.first_name}}</td>
                 <td>{{owner.last_name}}</td>
-                <td><button ng-click="oc.deleteOwner(owner.owner_id)">Remove</button></td>
+                <td>{{owner.count}}</td>
+                <td><button ng-click="oc.deleteOwner(owner)">Remove</button></td>
                 
 
 
