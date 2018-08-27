@@ -19,6 +19,7 @@ PetHotelApp.controller('OwnerController', function ($http) {
             url: '/owner',
             data: ownerToAdd
         }).then(function (response) {
+            getOwner();
             console.log('Input received');
         }).catch(function (error) {
             alert('error adding new owner to list');
@@ -46,3 +47,18 @@ PetHotelApp.controller('OwnerController', function ($http) {
 
     getOwner();
 })
+
+
+    
+    deleteOwner = function (owner_id) {
+        $http({
+            method: 'DELETE',
+            url: '/owner/' + owner_id
+        }).then(function (response) {
+            alert('owner deleted.');
+             vm.getOwner();
+        }).catch(function (error) {
+            alert('Unable to delete owner');
+            console.log(error);
+        })
+    }

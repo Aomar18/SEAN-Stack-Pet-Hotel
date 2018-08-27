@@ -69,6 +69,7 @@
             <td>{{pet.color}}</td>
             <td>{{pet.checkedin}}</td>
             <td>{{pet.lastcheckin | date : "dd.MM.y"}}</td>
+            <td><button ng-click="pc.deletePet(pet_id)">Remove Pet</button></td>
         </tr>
     </table>
 

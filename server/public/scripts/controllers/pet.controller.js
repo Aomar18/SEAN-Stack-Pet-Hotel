@@ -19,6 +19,7 @@ PetHotelApp.controller('PetController', function ($http) {
             url: '/pet',
             data: petToAdd
         }).then(function (response) {
+            getPets();
             console.log('Input received');
         }).catch(function (error) {
             alert('error adding new pet to data');
@@ -46,3 +47,17 @@ PetHotelApp.controller('PetController', function ($http) {
 
 
 })
+
+
+deletePet = function (pet_id) {
+    $http({
+        method: 'DELETE',
+        url: '/pet/' + pet_id
+    }).then(function (response) {
+        alert('pet deleted.');
+        getPets();
+    }).catch(function (error) {
+        alert('Unable to delete pet');
+        console.log(error);
+    })
+}
