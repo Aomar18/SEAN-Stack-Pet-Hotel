@@ -1,9 +1,9 @@
 .first {
-    background: linear-gradient( to top,
-        #1AAB8A,
-        #1AAB8A,
+    background: linear-gradient( to top right,
+        gray,
+        gray,
         skyblue,
-        skyblue,
+        gray,
         #1AAB8A,
         #1AAB8A
 
@@ -107,4 +107,8 @@ button{
   button:hover:before,button:hover:after{
     width:100%;
     transition:8000ms ease all;
+  }
+
+  .new{
+      background-color: red;
   }
